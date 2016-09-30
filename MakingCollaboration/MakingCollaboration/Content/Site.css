@@ -99,13 +99,6 @@ header .logo{
 	margin-right: 15px;
 }
 
-.group-item{
-	padding-bottom: 10px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid #ccc;
-	overflow: auto;
-}
-
 .profile ul{
 	margin-top: 30px;
 }
@@ -160,8 +153,39 @@ footer{
 .panel {
     margin-bottom: 5px !important;
     background-color: #ffffff;
-    border: 1px solid #d3e0e9;
-    border-radius: 0px !important;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border: 0px !important;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.post-link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.post-tag-side {
+    margin-top: 5px;
+     float:  left;
+   clear: left;
+}
+
+.post-tag {
+    background-color: #E1ECF4;
+    border-color: transparent;
+    margin-left: 5px;
+}
+
+.post-tag a{
+    color: #666;
+}
+
+.tags-section {
+    margin-top: 7px;
+    margin-left: 7px;
 }

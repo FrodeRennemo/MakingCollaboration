@@ -2,6 +2,8 @@
     ViewBag.Title = "Home Page";
 }
 
+
+
 <section>
     <div class="container">
         <div class="row">
@@ -12,10 +14,11 @@
                     </div>
                     <div class="panel-body">
                         <div class="group-item">
-                            <ul>
-                                <li>.NET</li>
-                                <li>Git</li>
-                            </ul>
+                            <div class="tags-section">
+                                <div class="post-tag post-tag-side"><a href="">C#</a></div>
+                                <div class="post-tag post-tag-side"><a href="">.NET</a></div>
+                                <div class="post-tag post-tag-side"><a href="">ASP MVC</a></div>
+                            </div>
                         </div>                       
                     </div>
                 </div>
@@ -23,41 +26,58 @@
 
             <div class="col-md-8">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Wall</h3>
-                    </div>
+                   
                     <div class="panel-body">
                         <form>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Write on the wall"></textarea>
+                                <textarea class="form-control input-textarea" placeholder="Write something.."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                            <div class="pull-right">
-                                <div class="btn-toolbar">
-                                    <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i>Text</button>
-                                    <button type="button" class="btn btn-default"><i class="fa fa-file-image-o"></i>Image</button>
-                                    <button type="button" class="btn btn-default"><i class="fa fa-file-video-o"></i>Video</button>
-                                </div>
-                            </div>
+                            <button type="submit" class="btn btn-default btn-post-submit">Submit</button>                           
                         </form>
                     </div>
                 </div>
+                
+                <span class="new-post-placeholder"></span>
                 <div class="panel panel-default post">
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-2">
-                                <a href="profile.html" class="post-avatar thumbnail"><img src="Content/avatar.png" alt="">
-                                 </a>
-                                <div class="likes text-center">Score: 7</div>
+                                <a href="profile.html" class="post-avatar thumbnail"><img src="/Content/avatar.png" alt="">
+                                </a>
+                                <div class="likes text-center">Score: 1</div>
                             </div>
                             <div class="col-sm-10">
                                 <div class="bubble">
                                     <div class="pointer">
-                                        <p>Hey I was wondering if you wanted to go check out the football game later. I heard they are supposed to be really good!</p>
+                                     
+                                        <a href="" class="post-link">
+                                            <p>
+                                                I'm writing an asp.net MVC application and decide to try Knockout.js for dynamic UI stuff.
+                                                It's a great framework it helped me so much so far. But I faced 2 problems that I can't solve and find any
+                                                <a href="" class="expand-item">...</a>
+
+                                            </p>
+                                        </a>
+                                         
+                                    
                                     </div>
                                     <div class="pointer-border"></div>
                                 </div>
-                                <p class="post-actions"><a href="#">Comment</a> - <a href="#">Upvote</a> - <a href="#">Downvote</a>
+                                <div class="tags-section">
+                                    <span class="post-tag"><a href="">C#</a></span>
+                                    <span class="post-tag"><a href="">.NET</a></span>
+                                    <span class="post-tag"><a href="">ASP MVC</a></span>
+                                </div>
+                                <p class="post-actions">
+                                    <button type="button"
+                                            id="testBtn"
+                                            class="btn btn-success glyphicon glyphicon-thumbs-up"
+                                            data-loading-text=" ... ">
+                                        4
+                                    </button>
+                                    <button type="button" id="testBtnDown" class="btn btn-success glyphicon glyphicon-thumbs-down" data-loading-text=" ... ">
+                                        4
+                                    </button>
                                 </p>
                             
                             </div>
@@ -68,44 +88,36 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-2">
-                                <a href="profile.html" class="post-avatar thumbnail"><img src="img/user.png" alt="">
-                                    <div class="text-center">DevUser1</div></a>
-                                <div class="likes text-center">7 Likes</div>
+                                <a href="profile.html" class="post-avatar thumbnail">
+                                    <img src="/Content/avatar2.jpg" alt="">
+                                </a>
+                                <div class="likes text-center">Score: 7</div>
                             </div>
                             <div class="col-sm-10">
                                 <div class="bubble">
                                     <div class="pointer">
-                                        <p>Hey I was wondering if you wanted to go check out the football game later. I heard they are supposed to be really good!</p>
-                                    </div>
+                                        <a href="" class="post-link">
+                                            <p>I have a web api method that takes format as a parameter that provides returning both xml and json.The data type that method return is DataTable.In json format everything looks fine but in xml format ...</p></a>
+</div>
                                     <div class="pointer-border"></div>
                                 </div>
-                                <p class="post-actions"><a href="#">Comment</a> - <a href="#">Like</a> - <a href="#">Follow</a> - <a href="#">Share</a>
+                                <div class="tags-section">
+                                    <span class="post-tag"><a href="">C#</a></span>
+                                    <span class="post-tag"><a href="">.NET</a></span>
+                                    <span class="post-tag"><a href="">ASP MVC</a></span>
+                                </div>
+                                <p class="post-actions">
+                                    <button type="button"
+                                            id="testBtn"
+                                            class="btn btn-success glyphicon glyphicon-thumbs-up"
+                                            data-loading-text=" ... ">
+                                        4
+                                    </button>
+                                    <button type="button" id="testBtnDown" class="btn btn-success glyphicon glyphicon-thumbs-down" data-loading-text=" ... ">
+                                        4
+                                    </button>
                                 </p>
-                                <div class="comment-form">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="enter comment">
-                                        </div>
-                                        <button type="submit" class="btn btn-default">Add</button>
-                                    </form>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="comments">
-                                    <div class="comment">
-                                        <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
-                                        <div class="comment-text">
-                                            <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="comment">
-                                        <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
-                                        <div class="comment-text">
-                                            <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -114,48 +126,89 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-2">
-                                <a href="profile.html" class="post-avatar thumbnail"><img src="img/user.png" alt="">
-                                    <div class="text-center">DevUser1</div></a>
-                                <div class="likes text-center">7 Likes</div>
+                                <a href="profile.html" class="post-avatar thumbnail">
+                                    <img src="/Content/avatar3.png" alt="">
+                                </a>
+                                <div class="likes text-center">Score: 2</div>
                             </div>
                             <div class="col-sm-10">
                                 <div class="bubble">
                                     <div class="pointer">
-                                        <p>Hey I was wondering if you wanted to go check out the football game later. I heard they are supposed to be really good!</p>
+                                        <a href="" class="post-link">
+                                            <p>I have a Silverlight 5 browser application. There is a class public class ActivityControl:UserControl{ public void LoadSubControls(){ //Creates Other UserControls, does calculations and ...</p>
+                                        </a>
                                     </div>
                                     <div class="pointer-border"></div>
                                 </div>
-                                <p class="post-actions"><a href="#">Comment</a> - <a href="#">Like</a> - <a href="#">Follow</a> - <a href="#">Share</a>
+                                <div class="tags-section">
+                                    <span class="post-tag"><a href="">C#</a></span>
+                                    <span class="post-tag"><a href="">.NET</a></span>
+                                    <span class="post-tag"><a href="">ASP MVC</a></span>
+                                </div>
+                                <p class="post-actions">
+                                    <button type="button"
+                                            id="testBtn"
+                                            class="btn btn-success glyphicon glyphicon-thumbs-up"
+                                            data-loading-text=" ... ">
+                                        4
+                                    </button>
+                                    <button type="button" id="testBtnDown" class="btn btn-success glyphicon glyphicon-thumbs-down" data-loading-text=" ... ">
+                                        4
+                                    </button>
                                 </p>
-                                <div class="comment-form">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="enter comment">
-                                        </div>
-                                        <button type="submit" class="btn btn-default">Add</button>
-                                    </form>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="comments">
-                                    <div class="comment">
-                                        <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
-                                        <div class="comment-text">
-                                            <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="comment">
-                                        <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
-                                        <div class="comment-text">
-                                            <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <div style="display: none;" class="panel panel-default post post-new last-post">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <a href="profile.html" class="post-avatar thumbnail">
+                                    <img src="/Content/avatar.png" alt="">
+                                </a>
+                                <div class="likes text-center">Score: 1</div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="bubble">
+                                    <div class="pointer">
+
+                                        <a href="" class="post-link">
+                                            <p>
+                                               <span class="new-post-content"></span>
+
+                                            </p>
+                                        </a>
+
+
+                                    </div>
+                                    <div class="pointer-border"></div>
+                                </div>
+                                <div class="tags-section">
+                                    <span class="post-tag"><a href="">C#</a></span>
+                                    <span class="post-tag"><a href="">.NET</a></span>
+                                    <span class="post-tag"><a href="">ASP MVC</a></span>
+                                </div>
+                                <p class="post-actions">
+                                    <button type="button"
+                                            id="testBtn"
+                                            class="btn btn-success glyphicon glyphicon-thumbs-up"
+                                            data-loading-text=" ... ">
+                                        4
+                                    </button>
+                                    <button type="button" id="testBtnDown" class="btn btn-success glyphicon glyphicon-thumbs-down" data-loading-text=" ... ">
+                                        4
+                                    </button>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+           
             </div>
 
         </div>
