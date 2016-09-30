@@ -12,10 +12,13 @@
                     </div>
                     <div class="panel-body">
                         <div class="group-item">
-                            <ul>
-                                <li>.NET</li>
-                                <li>Git</li>
-                            </ul>
+                            <div class="group-item">
+                                <div class="tags-section">
+                                    <div class="post-tag post-tag-side"><a href="">C#</a></div>
+                                    <div class="post-tag post-tag-side"><a href="">.NET</a></div>
+                                    <div class="post-tag post-tag-side"><a href="">ASP MVC</a></div>
+                                </div>
+                            </div>         
                         </div>
                     </div>
                 </div>
@@ -32,8 +35,7 @@
                         <div class="row">
                             <div class="col-sm-2">
                                 <a href="profile.html" class="post-avatar thumbnail">
-                                    <img src="img/user.png" alt="">
-                                    <div class="text-center">DevUser1</div>
+                                    <img src="/Content/avatar.png" alt="">
                                 </a>
                                 <div class="likes text-center">7 Likes</div>
                             </div>
@@ -45,8 +47,15 @@
                                     <div class="pointer-border"></div>
                                 </div>
                                 <p class="post-actions">
-                                <p class="post-actions">
-                                    <a href="#">Upvote</a> - <a href="#">Downvote</a>
+                                    <button type="button"
+                                            id="testBtn"
+                                            class="btn btn-success glyphicon glyphicon-thumbs-up"
+                                            data-loading-text=" ... ">
+                                        4
+                                    </button>
+                                    <button type="button" id="testBtnDown" class="btn btn-success glyphicon glyphicon-thumbs-down" data-loading-text=" ... ">
+                                        4
+                                    </button>
                                 </p>
                                 <div class="comment-form">
                                     <form class="form-inline">
@@ -59,14 +68,14 @@
                                 <div class="clearfix"></div>
                                 <div class="comments" id="Comments">
                                     <div class="comment" id="test">
-                                        <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
+                                        <a href="#" class="comment-avatar pull-left"><img class="avatar-comment" src="/Content/avatar2.jpg" alt="" /></a>
                                         <div class="comment-text">
                                             <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="comment">
-                                        <a href="#" class="comment-avatar pull-left"><img src="img/user.png" alt=""></a>
+                                        <a href="#" class="comment-avatar pull-left"><img class="avatar-comment" src="/Content/avatar3.png" alt="" /></a>
                                         <div class="comment-text">
                                             <p>I am just going to paste in a paragraph, then we will add another clearfix.</p>
                                         </div>
